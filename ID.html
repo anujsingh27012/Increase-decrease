@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Decrease the number</title>
+    <link rel="stylesheet" href="./ID.css">
+</head>
+<body>
+    <div class="container">
+        <div><h2 class="heading">JavaScript Project</h2></div>
+        <div class="show-number">
+            <p id="Show-number"></p>
+        </div>
+        <div class="button">
+            <button onclick="Decrease()">Decrease</button>
+            <button onclick="Increase()">Increase</button>
+        </div>
+    </div>
+
+    <script>
+
+      let num=0;
+      document.getElementById("Show-number").innerHTML=num;
+      let changeColor=document.getElementById("Show-number");
+      let Decrease=()=>{
+         num=num-1;
+         document.getElementById("Show-number").innerHTML=num;
+         if(num<0)
+        {
+            changeColor.style.color="red";
+        }
+        else
+        {
+            changeColor.style.color="green";
+        }
+      }
+      let Increase=()=>{
+        num=num+1;
+        document.getElementById("Show-number").innerHTML=num;
+        if(num<0)
+        {
+            changeColor.style.color="red";
+        }
+        else
+        {
+            changeColor.style.color="green";
+        }
+      }
+
+    </script>
+
+
+</body>
+</html>
